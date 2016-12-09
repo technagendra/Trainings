@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Functions and Arguments</title>
+<script type="text/javascript">
+//console.log(sum(10,20));
+//console.log(test(10,20));
+var a=10;
+function sum(a,b){
+		return a+b;		
+	}
+	var test=function(a,b){
+		return a+b;		
+	}
+	var b=20;
+	//console.log(sum(10,20));
+	function testArguments(){
+		var sum=0;
+		for(var arg in arguments){
+			var value=Number(arguments[arg]);
+			if(typeof value === 'number')
+			   sum+=value
+		}
+		return sum;
+	}
+	//console.log(testArguments(10,20,30));
+	var age=10;
+	function callByValue(age){
+		age+=10;
+	}
+	callByValue(age);
+	console.log(age)
+	var obj=new Object();
+	obj.age=10;
+	function callByRef(obj){
+		obj.age+=10;
+	}
+	callByRef(obj);
+	console.log(obj.age)
+</script>
+</head>
+<body>
+
+</body>
+</html>
