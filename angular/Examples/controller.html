@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<script src="angular.js"></script>
+<script type="text/javascript">
+	var myApp = angular.module('myApp',[]);
+	myApp.controller('MainCntrl', ['$scope', function($scope) {
+		$scope.name='My Name is Khan';
+		$scope.changeMyName=function(){
+			alert($scope.name);
+		}
+	}]);
+
+</script>
+<title>controller</title>
+</head>
+<body ng-controller="MainCntrl">
+	<input type="text" ng-model="name"></div>
+	<input type="button" value="Name Plz" ng-click="changeMyName()"/>
+</body>
+</html>
